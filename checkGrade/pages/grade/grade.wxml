@@ -1,0 +1,8 @@
+<view>
+  <view class='container'>
+    学号:<input class="input" type="number" name="id" placeholder='请输入学号' bindinput='userIdInput'></input>
+    班号:<input class="input"type="number" name="classNum"  bindinput='classNumberInput'></input></view>
+  <button class="button" bindtap="RequestData">确认</button>
+  <view>{{infoMess}}</view>
+  <text>成绩为：{{score}}</text>
+</view>

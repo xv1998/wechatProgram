@@ -1,0 +1,22 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "weui-wxss": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.3.0",
+    "eslint-config-alloy": "^1.4.2"
+  },
+  "scripts": {
+    "app": "node app.js ",
+    "index": "node pages/index/index.js",
+    "grade": "node pages/grade/grade.js",
+    "logs": "node pages/logs/logs.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

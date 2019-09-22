@@ -1,0 +1,32 @@
+<view class="page">
+    
+    <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title" >
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="font">2018/9/3 20:00</view>
+            </navigator>
+            
+            <navigator wx:for="{{datalist}}" wx:for-item="data" wx:key="keyname" wx:if="{{data.situation==1}}" url="/pages/detail/detail?tasknum={{data.keyname}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                
+                <view class="weui-cell__bd">{{data.name}}</view>
+                
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            
+            
+           
+           <button class="weui-btn" type="primary"  plain="true"  bindtap="btn">{{showView?'已完成任务':'隐藏已完成任务'}}</button>
+
+            <navigator wx:for="{{datalist}}" wx:for-item="data" wx:key="keyname" wx:if="{{data.situation==2}}"url="/pages/detail/detail?tasknum={{data.keyname}}" class="weui-cell weui-cell_access {{showView?'hide':'show'}}" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">{{data.name}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            
+            <navigator url="../grade/grade" >
+                <view >
+                   <image class="add_icon" src="../../i/add.png"></image>
+                 </view>
+            </navigator>
+        </view>
+    </view>
+</view>

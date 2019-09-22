@@ -1,0 +1,32 @@
+
+
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="任务名称（必填）" bindinput="taskName"/>
+                </view>
+            </view>
+        </view>
+        
+<form bindsubmit="setDatalist">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="任务内容（选填）" style="height: 3.3em" bindblur='taskContext'/>
+                </view>
+            </view>
+
+        </view>
+        <view class="weui-btn-area ">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <button class="btn" type="default">任务标签</button>
+            </picker>
+        </view>
+        <view class="button-sp-area">
+            <button class="weui-btn btn" type="primary" formType="submit">确定</button>
+            </view>
+</form>
+       

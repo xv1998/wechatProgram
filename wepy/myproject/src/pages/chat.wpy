@@ -1,0 +1,38 @@
+<style type="sass">
+.body {
+  height: 100%;
+  background-color: #ededed;
+}
+</style>
+<template>
+  <view class="body">
+    <component id="chartboard"></component>
+    <component id="input"></component>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+
+// 通过继承自wepy.page的类创建页面逻辑
+export default class Index extends wepy.page {
+  //可用于页面模板绑定的数据
+  data = {
+    motto: 'Hello World',
+    userInfo: {}
+  };
+
+  //事件处理函数(集中保存在methods对象中)
+  methods = {
+    bindViewTap () {
+      console.log('button clicked');
+    }
+  };
+
+  //页面的生命周期函数
+  onLoad () {
+    console.log('onLoad');
+  };
+}
+
+</script>
